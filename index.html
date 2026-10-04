@@ -12,16 +12,15 @@
 
     <header>
 
-      <div class="hero-visual">
+        <div class="hero-visual">
+            <img class="hero-image" src="images/hero.jpg" alt="Yutaro Kudo">
+        </div>
 
-        <img class="hero-image" src="images/hero.jpg" alt="Yutaro Kudo">
-
-      </div>
         <div class="hero-content">
 
             <h1>YUTARO KUDO</h1>
 
-            <p>Director</p>
+            <p data-i18n="hero-role">Director</p>
 
             <nav>
                 <ul>
@@ -31,57 +30,124 @@
                 </ul>
             </nav>
 
+            <div class="language-switcher">
+                <button
+                    type="button"
+                    class="lang-button active"
+                    data-lang="en"
+                >
+                    EN
+                </button>
+
+                <span>/</span>
+
+                <button
+                    type="button"
+                    class="lang-button"
+                    data-lang="ja"
+                >
+                    日本語
+                </button>
+            </div>
+
         </div>
+
     </header>
+
 
     <main>
 
+        <!-- WORK -->
+
         <section id="work">
+
             <h2>WORK</h2>
 
             <div class="work-grid">
+
                 <article class="project">
-        
-                        <div class="project-visual"></div>
-        
-                        <div class="project-info">
-                            <h3>TOO FAST</h3>
-                            <p class="project-artist">rua</p>
-            
-                            <p class="project-type">Music Video · 2026</p>
-            
-                            <div class="project-credits">
-                                <p>Produced by Avatar Beats</p>
-                                <p>Directed, Filmed & Edited by Yutaro Kudo</p>
-                            </div>
-                            <p class="project-status">COMING SOON</p>
+
+                    <div class="project-visual"></div>
+
+                    <div class="project-info">
+
+                        <h3>TOO FAST</h3>
+
+                        <p class="project-artist">
+                            rua
+                        </p>
+
+                        <p
+                            class="project-type"
+                            data-i18n="project-type"
+                        >
+                            Music Video · 2026
+                        </p>
+
+                        <div class="project-credits">
+
+                            <p data-i18n="project-producer">
+                                Produced by Avatar Beats
+                            </p>
+
+                            <p data-i18n="project-credits">
+                                Directed, Filmed & Edited by Yutaro Kudo
+                            </p>
+
                         </div>
-              
+
+                        <p
+                            class="project-status"
+                            data-i18n="project-status"
+                        >
+                            COMING SOON
+                        </p>
+
+                    </div>
+
                 </article>
+
             </div>
+
         </section>
 
+
+        <!-- ABOUT -->
+
         <section id="about">
+
             <h2>ABOUT</h2>
-            
-            <div class="about-content">     
+
+            <div class="about-content">
+
                 <div class="about-text">
-                    <h3>YUTARO “KYUU” KUDO</h3>
-                    <p class="about-role">Director / Filmmaker</p>
-                    <p>
+
+                    <h3 data-i18n="about-name">
+                        YUTARO “KYUU” KUDO
+                    </h3>
+
+                    <p
+                        class="about-role"
+                        data-i18n="about-role"
+                    >
+                        Director / Filmmaker
+                    </p>
+
+                    <p data-i18n="about-p1">
                         Born on November 16, 2003, and raised in Morioka, Iwate,
                         Yutaro Kudo, also known as Kyuu, is an emerging director
                         and filmmaker with a passion for film and visual storytelling.
                     </p>
-                    <p>
-                        A graduate of Morioka University with a degree in English 
-                        Literature, Kyuu is currently working as an apprentice in the 
-                        film industry, gaining firsthand experience on professional 
-                        productions and developing his understanding of the craft both 
+
+                    <p data-i18n="about-p2">
+                        A graduate of Morioka University with a degree in English
+                        Literature, Kyuu is currently working as an apprentice in the
+                        film industry, gaining firsthand experience on professional
+                        productions and developing his understanding of the craft both
                         on set and behind the scenes.
                     </p>
 
-                    <p>
+                    <p data-i18n="about-p3">
                         Kyuu’s first directing project is a music video for a friend
                         and rapper, bringing together his interests in film and music.
                         Taking on multiple roles, he directed, filmed, and edited the
@@ -89,41 +155,71 @@
                         filmmaking process.
                     </p>
 
-                    <p>
+                    <p data-i18n="about-p4">
                         Now relocating from Morioka to Tokyo, Kyuu is entering a new
                         chapter in his career, seeking new experiences and collaborations
                         as he continues to develop his craft and creative identity
                         as a director.
                     </p>
+
                 </div>
+
             </div>
+
         </section>
 
+
+        <!-- CONTACT -->
+
         <section id="contact">
+
             <h2>CONTACT</h2>
 
             <div class="contact-content">
-                <p>For collaborations, inquiries, and creative projects:</p>
-                
-                <a class="contact-email" href="mailto:yutaro.9do@gmail.com">
+
+                <p data-i18n="contact-text">
+                    For collaborations, inquiries, and creative projects:
+                </p>
+
+                <a
+                    class="contact-email"
+                    href="mailto:yutaro.9do@gmail.com"
+                >
                     yutaro.9do@gmail.com
                 </a>
 
                 <div class="social-links">
-                    <a href="https://www.instagram.com/_kyu9do.c_/" target="_blank" rel="noopener noreferrer">
+
+                    <a
+                        href="https://www.instagram.com/_kyu9do.c_/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         INSTAGRAM ↗
                     </a>
-                    <a href="https://www.youtube.com/@kyu9do.c" target="_blank" rel="noopener noreferrer">
+
+                    <a
+                        href="https://www.youtube.com/@kyu9do.c"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         YOUTUBE ↗
                     </a>
+
                 </div>
+
             </div>
+
         </section>
 
     </main>
 
+
     <footer>
     </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
 

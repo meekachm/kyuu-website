@@ -5,10 +5,124 @@ body {
     color: #ffffff;
 }
 
+
 header {
     min-height: 100vh;
     position: relative;
 }
+
+
+/* HERO */
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+}
+
+.hero-visual::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero-content {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 0 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content p {
+    font-size: 16px;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+
+h1 {
+    font-size: clamp(40px, 5vw, 80px);
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+
+/* NAVIGATION */
+
+ul {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 2px;
+    transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+    opacity: 0.6;
+}
+
+
+/* LANGUAGE SWITCHER */
+
+.language-switcher {
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    z-index: 10;
+}
+
+.lang-button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding: 0;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+.lang-button:hover {
+    opacity: 1;
+}
+
+.lang-button.active {
+    opacity: 1;
+}
+
+.language-switcher span {
+    margin: 0 6px;
+    color: #ffffff;
+    opacity: 0.4;
+}
+
+
+/* WORK */
 
 #work {
     padding: 120px 40px;
@@ -57,51 +171,49 @@ header {
     opacity: 0.7;
 }
 
-.hero-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    z-index: 0;
+.project-info {
+    margin-top: 22px;
 }
 
-.hero-visual::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1;
+.project-info h3 {
+    margin: 0 0 8px;
 }
 
-.hero-content {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    padding: 0 40px;
-    position: relative;
-    z-index: 2;
+.project-artist {
+    font-size: 16px !important;
+    opacity: 1 !important;
+    margin-bottom: 24px !important;
 }
 
-.hero-content p {
-    font-size: 16px;
-    letter-spacing: 3px;
-    margin: 0;
+.project-type {
+    font-size: 11px !important;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.5 !important;
+    margin-bottom: 24px !important;
 }
+
+.project-credits {
+    margin-bottom: 28px;
+}
+
+.project-credits p {
+    font-size: 13px !important;
+    line-height: 1.6;
+    opacity: 0.7 !important;
+}
+
+.project-status {
+    font-size: 11px !important;
+    letter-spacing: 2px;
+    opacity: 0.5 !important;
+}
+
+
+/* ABOUT */
 
 #about {
     padding: 120px 40px;
-}
-
-.about-photo {
-    width: 300px;
-    height: 400px;
-    object-fit: cover;
 }
 
 #about h2 {
@@ -129,11 +241,20 @@ header {
     margin: 0 0 50px;
 }
 
-.about-content > p {
+.about-text > p:not(.about-role) {
     font-size: 17px;
     line-height: 1.8;
     margin: 0 0 30px;
 }
+
+.about-photo {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+/* CONTACT */
 
 #contact {
     padding: 120px 40px;
@@ -190,34 +311,8 @@ header {
     opacity: 1;
 }
 
-h1 {
-    font-size: clamp(40px, 5vw, 80px);
-    font-weight: 400;
-    letter-spacing: 2px;
-    margin: 0;
-}
 
-ul {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 14px;
-    letter-spacing: 2px;
-    transition: opacity 0.3s ease;
-}
-
-nav a:hover {
-    opacity: 0.6;
-}
+/* MOBILE */
 
 @media (max-width: 600px) {
 
@@ -239,42 +334,4 @@ nav a:hover {
         padding: 80px 20px;
     }
 
-}
-
-.project-info {
-    margin-top: 22px;
-}
-
-.project-info h3 {
-    margin: 0 0 8px;
-}
-
-.project-artist {
-    font-size: 16px !important;
-    opacity: 1 !important;
-    margin-bottom: 24px !important;
-}
-
-.project-type {
-    font-size: 11px !important;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    opacity: 0.5 !important;
-    margin-bottom: 24px !important;
-}
-
-.project-credits {
-    margin-bottom: 28px;
-}
-
-.project-credits p {
-    font-size: 13px !important;
-    line-height: 1.6;
-    opacity: 0.7 !important;
-}
-
-.project-status {
-    font-size: 11px !important;
-    letter-spacing: 2px;
-    opacity: 0.5 !important;
 }
