@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +14,11 @@
     <header>
 
         <div class="hero-visual">
-            <img class="hero-image" src="images/hero.jpg" alt="Yutaro Kudo">
+            <img
+                class="hero-image"
+                src="images/hero.jpg"
+                alt="Yutaro Kudo"
+            >
         </div>
 
         <div class="hero-content">
@@ -22,7 +27,7 @@
 
             <p data-i18n="hero-role">Director</p>
 
-            <nav>
+            <nav aria-label="Main navigation">
                 <ul>
                     <li><a href="#work">WORK</a></li>
                     <li><a href="#about">ABOUT</a></li>
@@ -31,10 +36,12 @@
             </nav>
 
             <div class="language-switcher">
+
                 <button
                     type="button"
                     class="lang-button active"
                     data-lang="en"
+                    aria-pressed="true"
                 >
                     EN
                 </button>
@@ -45,9 +52,11 @@
                     type="button"
                     class="lang-button"
                     data-lang="ja"
+                    aria-pressed="false"
                 >
                     日本語
                 </button>
+
             </div>
 
         </div>
@@ -67,7 +76,18 @@
 
                 <article class="project">
 
-                    <div class="project-visual"></div>
+                    <div class="project-visual">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/DCQq6Etp7Mg"
+                            title="TOO FAST — rua | Music Video"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
 
                     <div class="project-info">
 
@@ -95,13 +115,6 @@
                             </p>
 
                         </div>
-
-                        <p
-                            class="project-status"
-                            data-i18n="project-status"
-                        >
-                            COMING SOON
-                        </p>
 
                     </div>
 
@@ -134,31 +147,35 @@
                     </p>
 
                     <p data-i18n="about-p1">
-                        Born on November 16, 2003, and raised in Morioka, Iwate,
-                        Yutaro Kudo, also known as Kyuu, is an emerging director
-                        and filmmaker with a passion for film and visual storytelling.
+                        Born on November 16, 2003, and raised in Morioka,
+                        Iwate, Yutaro Kudo, also known as Kyuu, is an
+                        emerging director and filmmaker with a passion
+                        for film and visual storytelling.
                     </p>
 
                     <p data-i18n="about-p2">
-                        A graduate of Morioka University with a degree in English
-                        Literature, Kyuu is currently working as an apprentice in the
-                        film industry, gaining firsthand experience on professional
-                        productions and developing his understanding of the craft both
-                        on set and behind the scenes.
+                        A graduate of Morioka University with a degree
+                        in English Literature, Kyuu is currently working
+                        as an apprentice in the film industry, gaining
+                        firsthand experience on professional productions
+                        and developing his understanding of the craft
+                        both on set and behind the scenes.
                     </p>
 
                     <p data-i18n="about-p3">
-                        Kyuu’s first directing project is a music video for a friend
-                        and rapper, bringing together his interests in film and music.
-                        Taking on multiple roles, he directed, filmed, and edited the
-                        project himself, gaining hands-on experience across the
+                        Kyuu’s first directing project is a music video
+                        for a friend and rapper, bringing together his
+                        interests in film and music. Taking on multiple
+                        roles, he directed, filmed, and edited the project
+                        himself, gaining hands-on experience across the
                         filmmaking process.
                     </p>
 
                     <p data-i18n="about-p4">
-                        Now relocating from Morioka to Tokyo, Kyuu is entering a new
-                        chapter in his career, seeking new experiences and collaborations
-                        as he continues to develop his craft and creative identity
+                        Now relocating from Morioka to Tokyo, Kyuu is
+                        entering a new chapter in his career, seeking
+                        new experiences and collaborations as he continues
+                        to develop his craft and creative identity
                         as a director.
                     </p>
 
@@ -215,12 +232,9 @@
     </main>
 
 
-    <footer>
-    </footer>
-
+    <footer></footer>
 
     <script src="script.js"></script>
 
 </body>
-
 </html>

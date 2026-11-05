@@ -1,10 +1,12 @@
+
+/* GENERAL */
+
 body {
     font-family: Georgia, serif;
     margin: 0;
     background-color: #000000;
     color: #ffffff;
 }
-
 
 header {
     min-height: 100vh;
@@ -13,6 +15,12 @@ header {
 
 
 /* HERO */
+
+.hero-visual {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
 
 .hero-image {
     position: absolute;
@@ -35,6 +43,8 @@ header {
 
 .hero-content {
     min-height: 100vh;
+    min-height: 100svh;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -51,12 +61,12 @@ header {
     margin: 0;
 }
 
-
 h1 {
     font-size: clamp(40px, 5vw, 80px);
     font-weight: 400;
     letter-spacing: 2px;
     margin: 0;
+    text-align: center;
 }
 
 
@@ -107,10 +117,7 @@ nav a:hover {
     transition: opacity 0.2s ease;
 }
 
-.lang-button:hover {
-    opacity: 1;
-}
-
+.lang-button:hover,
 .lang-button.active {
     opacity: 1;
 }
@@ -160,15 +167,21 @@ nav a:hover {
     text-decoration: none;
 }
 
+
+/* PROJECT VIDEO */
+
 .project-visual {
     width: 100%;
     aspect-ratio: 16 / 9;
     background-color: #333333;
-    transition: opacity 0.3s ease;
+    overflow: hidden;
 }
 
-.work-grid a:hover .project-visual {
-    opacity: 0.7;
+.project-visual iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 .project-info {
@@ -201,12 +214,6 @@ nav a:hover {
     font-size: 13px !important;
     line-height: 1.6;
     opacity: 0.7 !important;
-}
-
-.project-status {
-    font-size: 11px !important;
-    letter-spacing: 2px;
-    opacity: 0.5 !important;
 }
 
 
@@ -318,6 +325,7 @@ nav a:hover {
 
     .hero-content {
         gap: 40px;
+        padding: 0 20px;
     }
 
     .hero-content p {
@@ -326,12 +334,28 @@ nav a:hover {
         text-align: center;
     }
 
+    h1 {
+        font-size: clamp(32px, 9vw, 50px);
+    }
+
+    .language-switcher {
+        top: 20px;
+        right: 20px;
+    }
+
     .work-grid {
         grid-template-columns: 1fr;
     }
 
-    #about {
+    #work,
+    #about,
+    #contact {
         padding: 80px 20px;
+    }
+
+    .social-links {
+        flex-wrap: wrap;
+        gap: 20px;
     }
 
 }

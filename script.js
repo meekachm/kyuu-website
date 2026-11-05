@@ -1,6 +1,12 @@
+
+/* LANGUAGE SWITCHER */
+
 const languageButtons = document.querySelectorAll(".lang-button");
+
 const translatableElements = document.querySelectorAll("[data-i18n]");
 
+
+/* TRANSLATIONS */
 
 const translations = {
 
@@ -11,7 +17,6 @@ const translations = {
         "project-type": "Music Video · 2026",
         "project-producer": "Produced by Avatar Beats",
         "project-credits": "Directed, Filmed & Edited by Yutaro Kudo",
-        "project-status": "COMING SOON",
 
         "about-name": "YUTARO “KYUU” KUDO",
         "about-role": "Director / Filmmaker",
@@ -30,6 +35,7 @@ const translations = {
 
         "contact-text":
             "For collaborations, inquiries, and creative projects:"
+
     },
 
 
@@ -40,7 +46,6 @@ const translations = {
         "project-type": "ミュージックビデオ · 2026",
         "project-producer": "プロデュース：Avatar Beats",
         "project-credits": "監督・撮影・編集：工藤悠太郎",
-        "project-status": "近日公開",
 
         "about-name": "工藤悠太郎 / KYUU",
         "about-role": "映像監督 / フィルムメーカー",
@@ -59,37 +64,65 @@ const translations = {
 
         "contact-text":
             "コラボレーション、ご依頼、制作に関するお問い合わせはこちら："
+
     }
 
 };
 
 
+/* CHANGE LANGUAGE */
+
 function changeLanguage(language) {
+
+    const selectedTranslations = translations[language];
+
+    if (!selectedTranslations) {
+        return;
+    }
 
     translatableElements.forEach((element) => {
 
         const key = element.dataset.i18n;
 
-        element.textContent = translations[language][key];
+        if (Object.prototype.hasOwnProperty.call(selectedTranslations, key)) {
+            element.textContent = selectedTranslations[key];
+        }
 
     });
 
     document.documentElement.lang = language;
+
+    languageButtons.forEach((button) => {
+
+        const isActive = button.dataset.lang === language;
+
+        button.classList.toggle("active", isActive);
+
+        button.setAttribute(
+            "aria-pressed",
+            String(isActive)
+        );
+
+    });
+
 }
 
+
+/* LANGUAGE BUTTON EVENTS */
 
 languageButtons.forEach((button) => {
 
     button.addEventListener("click", () => {
 
-        languageButtons.forEach((btn) => {
-            btn.classList.remove("active");
-        });
+        const selectedLanguage = button.dataset.lang;
 
-        button.classList.add("active");
-
-        changeLanguage(button.dataset.lang);
+        changeLanguage(selectedLanguage);
 
     });
 
 });
+
+
+/* DEFAULT LANGUAGE */
+
+changeLanguage("en");
