@@ -171,17 +171,21 @@ nav a:hover {
 /* PROJECT VIDEO */
 
 .project-visual {
+    position: relative;
     width: 100%;
     aspect-ratio: 16 / 9;
-    background-color: #333333;
+    background-color: #000000;
     overflow: hidden;
 }
 
 .project-visual iframe {
-    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    border: 0;
+    border: none;
+    display: block;
 }
 
 .project-info {
